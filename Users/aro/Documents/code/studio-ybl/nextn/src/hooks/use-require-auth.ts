@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -12,11 +13,9 @@ export function useRequireAuth() {
     const router = useRouter();
 
     useEffect(() => {
-        // The auth object might be null on the first render, so we check for it.
+        // The auth object might be null on the first render while Firebase initializes.
+        // We wait for it to become available before setting up the listener.
         if (!auth) {
-            // If auth is not ready, we can't check the auth state.
-            // We'll wait for it to be initialized by the provider.
-            // The loading state will remain true.
             return;
         }
 
@@ -29,6 +28,7 @@ export function useRequireAuth() {
             setLoading(false);
         });
 
+        // Cleanup subscription on unmount
         return () => unsubscribe();
     }, [auth, router]);
 
