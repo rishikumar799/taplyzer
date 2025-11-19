@@ -2,19 +2,12 @@
 'use client';
 import {
   FirebaseApp,
-  getApp,
-  initializeApp,
-  type FirebaseOptions,
 } from 'firebase/app';
 import {
   Auth,
-  getAuth,
-  inMemoryPersistence,
-  setPersistence,
 } from 'firebase/auth';
 import {
   Firestore,
-  getFirestore,
 } from 'firebase/firestore';
 import {
   createContext,

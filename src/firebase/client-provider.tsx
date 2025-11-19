@@ -1,6 +1,6 @@
 
 'use client';
-import { initializeFirebase } from '.';
+import { initializeFirebase } from './client-init';
 import { FirebaseProvider } from './provider';
 import type { ReactElement } from 'react';
 
@@ -23,7 +23,8 @@ export function FirebaseClientProvider({
   children: React.ReactNode;
 }): ReactElement {
   if (!firebaseApp || !auth || !firestore) {
-    // Render nothing on the server or if Firebase fails to initialize
+    // This case should not happen on the client.
+    // If it does, it might be better to show a loading state or an error.
     return <>{children}</>;
   }
 
