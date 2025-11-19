@@ -5,7 +5,6 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from '@/components/theme-provider';
 import { FirebaseProvider } from '@/firebase';
-import { initializeFirebase } from '@/firebase/client-init';
 
 // Metadata can be defined in a client component, but it's often better in a server component layout if possible.
 // Since this is the root layout and we need a client boundary for providers, we define it here.
@@ -20,7 +19,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { firebaseApp, auth, firestore } = initializeFirebase();
 
   return (
     <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
@@ -38,7 +36,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <FirebaseProvider firebaseApp={firebaseApp} auth={auth} firestore={firestore}>
+          <FirebaseProvider>
             {children}
           </FirebaseProvider>
           <Toaster />

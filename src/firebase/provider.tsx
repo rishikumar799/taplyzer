@@ -2,19 +2,27 @@
 'use client';
 import {
   FirebaseApp,
+  getApp,
+  getApps,
+  initializeApp,
 } from 'firebase/app';
 import {
   Auth,
+  getAuth,
 } from 'firebase/auth';
 import {
   Firestore,
+  getFirestore,
 } from 'firebase/firestore';
 import {
   createContext,
   useContext,
   useMemo,
   type ReactNode,
+  useState,
+  useEffect
 } from 'react';
+import { firebaseConfig } from './config';
 
 export type FirebaseContextValue = {
   firebaseApp: FirebaseApp;
@@ -28,26 +36,35 @@ const FirebaseContext = createContext<FirebaseContextValue | undefined>(
 
 export type FirebaseProviderProps = {
   children: ReactNode;
-} & Partial<FirebaseContextValue>;
+};
 
 export function FirebaseProvider({
-  children,
-  ...props
+  children
 }: FirebaseProviderProps) {
-  const value = useMemo(() => {
-    // If we have all the props, use them
-    if ('firebaseApp' in props && 'auth' in props && 'firestore' in props) {
-      return {
-        firebaseApp: props.firebaseApp!,
-        auth: props.auth!,
-        firestore: props.firestore!,
-      };
+  const [firebase, setFirebase] = useState<FirebaseContextValue | undefined>(undefined);
+
+  useEffect(() => {
+    let app;
+    if (getApps().length === 0) {
+      app = initializeApp(firebaseConfig);
+    } else {
+      app = getApp();
     }
-    return undefined;
-  }, [props]);
+    
+    const auth = getAuth(app);
+    const firestore = getFirestore(app);
+    
+    setFirebase({
+      firebaseApp: app,
+      auth,
+      firestore,
+    });
+  }, []);
 
   return (
-    <FirebaseContext.Provider value={value}>{children}</FirebaseContext.Provider>
+    <FirebaseContext.Provider value={firebase}>
+      {firebase ? children : null}
+    </FirebaseContext.Provider>
   );
 }
 
