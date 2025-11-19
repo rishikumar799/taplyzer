@@ -1,28 +1,11 @@
-import { FirebaseApp } from 'firebase/app';
-import { Auth } from 'firebase/auth';
-import { Firestore } from 'firebase/firestore';
 
-// These functions and providers are safe to be imported on the server
-// as they do not trigger the client-side SDK initialization.
-import {
-  FirebaseProvider,
-  useAuth,
-  useFirebase,
-  useFirebaseApp,
-  useFirestore,
-} from './provider';
-import { useUser } from './auth/use-user';
-import { FirebaseClientProvider } from './client-provider';
-import { initializeFirebase } from './client-init';
+// This file is safe to be imported on the server.
+// It only exports the provider component and server-safe types.
+import type { FirebaseApp } from 'firebase/app';
+import type { Auth } from 'firebase/auth';
+import type { Firestore } from 'firebase/firestore';
+
+import { FirebaseProvider } from './provider';
 
 export type { FirebaseApp, Auth, Firestore };
-export {
-  initializeFirebase,
-  FirebaseProvider,
-  FirebaseClientProvider,
-  useFirebase,
-  useFirebaseApp,
-  useFirestore,
-  useAuth,
-  useUser,
-};
+export { FirebaseProvider };
