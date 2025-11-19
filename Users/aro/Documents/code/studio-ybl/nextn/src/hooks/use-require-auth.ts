@@ -1,36 +1,20 @@
 
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { onAuthStateChanged, type User } from 'firebase/auth';
-import { useAuth } from '@/firebase/provider';
+import { useUser } from '@/firebase/auth/use-user';
 
 export function useRequireAuth() {
-    const auth = useAuth();
-    const [user, setUser] = useState<User | null>(null);
-    const [loading, setLoading] = useState(true);
+    const { user, loading } = useUser();
     const router = useRouter();
 
     useEffect(() => {
-        // The auth object might be null on the first render while Firebase initializes.
-        // We wait for it to become available before setting up the listener.
-        if (!auth) {
-            return;
+        // Ensure this effect only runs on the client and after the initial loading phase.
+        if (typeof window !== 'undefined' && !loading && !user) {
+            router.push('/login');
         }
-
-        const unsubscribe = onAuthStateChanged(auth, (user) => {
-            if (!user) {
-                router.push('/login');
-            } else {
-                setUser(user);
-            }
-            setLoading(false);
-        });
-
-        // Cleanup subscription on unmount
-        return () => unsubscribe();
-    }, [auth, router]);
+    }, [user, loading, router]);
 
     return { user, loading };
 }
