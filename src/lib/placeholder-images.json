@@ -1,0 +1,172 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "A stylish and modern office interior.",
+      "imageUrl": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2V8ZW58MHx8fHwxNzYxMDM1MDEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern office"
+    },
+    {
+      "id": "about-us",
+      "description": "A group of professionals collaborating in a meeting.",
+      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "team meeting"
+    },
+    {
+      "id": "team-member-1",
+      "description": "Profile picture of Alice Johnson.",
+      "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "team-member-2",
+      "description": "Profile picture of Bob Williams.",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "man smiling"
+    },
+    {
+      "id": "team-member-3",
+      "description": "Profile picture of Charlie Brown.",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "team-member-4",
+      "description": "Profile picture of Diana Miller.",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "woman smiling"
+    },
+    {
+      "id": "team-member-5",
+      "description": "Profile picture of Ethan Davis.",
+      "imageUrl": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "team-member-6",
+      "description": "Profile picture of Fiona Garcia.",
+      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "testimonial-avatar-1",
+      "description": "Profile picture of Sarah Chen.",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "testimonial-avatar-2",
+      "description": "Profile picture of Michael Rodriguez.",
+      "imageUrl": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "testimonial-avatar-3",
+      "description": "Profile picture of Emily Johnson.",
+      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "woman smiling"
+    },
+    {
+      "id": "testimonial-avatar-4",
+      "description": "Profile picture of David Park",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "testimonial-avatar-5",
+      "description": "Profile picture of Lisa Anderson.",
+      "imageUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "testimonial-avatar-6",
+      "description": "Profile picture of James Wilson.",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "nfc-phone",
+      "description": "A person making a contactless payment with their phone in a coffee shop.",
+      "imageUrl": "https://ik.imagekit.io/7z0x3rycfi/hero?updatedAt=1761129154241",
+      "imageHint": "nfc payment"
+    },
+    {
+      "id": "blog-post-1",
+      "description": "Abstract image of interconnected digital nodes.",
+      "imageUrl": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "digital network"
+    },
+    {
+      "id": "blog-post-2",
+      "description": "A dashboard showing various charts and graphs.",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "analytics dashboard"
+    },
+    {
+      "id": "blog-post-3",
+      "description": "A person designing a user interface on a computer.",
+      "imageUrl": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "ui design"
+    },
+    {
+      "id": "blog-post-4",
+      "description": "A group of diverse professionals in a collaborative work environment.",
+      "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "team collaboration"
+    },
+    {
+      "id": "portfolio-1",
+      "description": "Sleek and modern corporate smart cards.",
+      "imageUrl": "https://images.unsplash.com/photo-1696016621692-2b075e1e030d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjb3Jwb3JhdGUlMjBjYXJkc3xlbnwwfHx8fDE3NjExNTY3MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "corporate cards"
+    },
+    {
+      "id": "portfolio-2",
+      "description": "Elegant smart cards for a real estate agency.",
+      "imageUrl": "https://images.unsplash.com/photo-1634344656611-0773d8dbbe2c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxyZWFsJTIwZXN0YXRlfGVufDB8fHx8MTc2MTEyODAwNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "real estate"
+    },
+    {
+      "id": "portfolio-3",
+      "description": "Vibrant and creative smart cards for a design studio.",
+      "imageUrl": "https://images.unsplash.com/photo-1466838931486-92f3b5ff31a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjcmVhdGl2ZSUyMGRlc2lnbnxlbnwwfHx8fDE3NjExMzkxODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "creative design"
+    },
+    {
+      "id": "portfolio-4",
+      "description": "Professional and secure smart cards for healthcare workers.",
+      "imageUrl": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxoZWFsdGhjYXJlJTIwcHJvZmVzc2lvbmFsfGVufDB8fHx8MTc2MTE1NjcwOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "healthcare professional"
+    },
+    {
+      "id": "portfolio-5",
+      "description": "Minimalist corporate smart cards.",
+      "imageUrl": "https://images.unsplash.com/photo-1704428381440-ae3d3b758a0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtaW5pbWFsaXN0JTIwZGVzaWdufGVufDB8fHx8MTc2MTE1NjcwOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "minimalist design"
+    },
+    {
+      "id": "portfolio-6",
+      "description": "Luxury smart cards for a high-end real estate brand.",
+      "imageUrl": "https://images.unsplash.com/photo-1628565548998-7121f5417ed5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bHV4dXJ5JTIwYnJhbmR8ZW58MHx8fHwxNzYxMTU2NzA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "luxury brand"
+    },
+    {
+      "id": "business-owner-hero",
+      "description": "Two business professionals collaborating over a laptop in a modern office.",
+      "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "business collaboration"
+    },
+    {
+      "id": "distributor-hero",
+      "description": "A handshake sealing a partnership deal.",
+      "imageUrl": "https://images.unsplash.com/photo-1543269664-56d93c1b41a6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "business partnership"
+    },
+    {
+      "id": "employee-hero",
+      "description": "A smiling employee holding up a smart business card.",
+      "imageUrl": "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "happy employee"
+    }
+  ]
+}
