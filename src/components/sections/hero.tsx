@@ -161,12 +161,12 @@ export function HeroSection() {
                   <p className="font-semibold text-sm text-foreground">
                     New Connection
                   </p>
-                  <p className="text-xs text-muted-foreground">Alex Ray</p>
+                  <p className="text-xs text-muted-foreground">Priya Sharma, Innovate Inc.</p>
                 </div>
                 <div className="absolute -top-4 -right-4 w-14 h-14 bg-primary rounded-full shadow-lg border-4 border-background flex items-center justify-center overflow-hidden group">
                   <Avatar className="h-12 w-12">
-                      <AvatarImage src="https://ik.imagekit.io/7z0x3rycfi/taplyzer/Businessman" data-ai-hint="businessman portrait"/>
-                      <AvatarFallback>AR</AvatarFallback>
+                      <AvatarImage src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" data-ai-hint="woman portrait"/>
+                      <AvatarFallback>PS</AvatarFallback>
                   </Avatar>
                 </div>
               </motion.div>
