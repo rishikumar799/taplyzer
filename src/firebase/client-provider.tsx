@@ -3,9 +3,10 @@
 import { initializeFirebase } from './client-init';
 import { FirebaseProvider } from './provider';
 import type { ReactElement } from 'react';
-
-// Initialize firebase on the client
-const { firebaseApp, firestore, auth } = initializeFirebase();
+import type { FirebaseApp } from 'firebase/app';
+import type { Auth } from 'firebase/auth';
+import type { Firestore } from 'firebase/firestore';
+import { useState, useEffect } from 'react';
 
 /**
  * A client-side provider that initializes Firebase and wraps the main
@@ -22,17 +23,28 @@ export function FirebaseClientProvider({
 }: {
   children: React.ReactNode;
 }): ReactElement {
-  if (!firebaseApp || !auth || !firestore) {
-    // This case should not happen on the client.
-    // If it does, it might be better to show a loading state or an error.
+  const [firebase, setFirebase] = useState<{
+    firebaseApp: FirebaseApp;
+    auth: Auth;
+    firestore: Firestore;
+  } | null>(null);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setFirebase(initializeFirebase());
+    }
+  }, []);
+
+  if (!firebase) {
+    // You can return a loading spinner here if you prefer
     return <>{children}</>;
   }
 
   return (
     <FirebaseProvider
-      firebaseApp={firebaseApp}
-      firestore={firestore}
-      auth={auth}
+      firebaseApp={firebase.firebaseApp}
+      firestore={firebase.firestore}
+      auth={firebase.auth}
     >
       {children}
     </FirebaseProvider>
