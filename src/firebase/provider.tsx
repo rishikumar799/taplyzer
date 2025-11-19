@@ -17,10 +17,9 @@ import {
 import {
   createContext,
   useContext,
-  useMemo,
-  type ReactNode,
+  useEffect,
   useState,
-  useEffect
+  type ReactNode,
 } from 'react';
 import { firebaseConfig } from './config';
 
@@ -41,10 +40,10 @@ export type FirebaseProviderProps = {
 export function FirebaseProvider({
   children
 }: FirebaseProviderProps) {
-  const [firebase, setFirebase] = useState<FirebaseContextValue | undefined>(undefined);
+  const [firebase, setFirebase] = useState<FirebaseContextValue | null>(null);
 
   useEffect(() => {
-    let app;
+    let app: FirebaseApp;
     if (getApps().length === 0) {
       app = initializeApp(firebaseConfig);
     } else {
@@ -61,9 +60,13 @@ export function FirebaseProvider({
     });
   }, []);
 
+  if (!firebase) {
+    return null; // Or a loading spinner
+  }
+
   return (
     <FirebaseContext.Provider value={firebase}>
-      {firebase ? children : null}
+      {children}
     </FirebaseContext.Provider>
   );
 }
@@ -77,13 +80,25 @@ export function useFirebase() {
 }
 
 export function useFirebaseApp() {
-  return useFirebase().firebaseApp;
+  const context = useFirebase();
+  if (!context) {
+    throw new Error('Firebase not initialized');
+  }
+  return context.firebaseApp;
 }
 
 export function useAuth() {
-  return useFirebase().auth;
+  const context = useFirebase();
+  if (!context) {
+    throw new Error('Firebase not initialized');
+  }
+  return context.auth;
 }
 
 export function useFirestore() {
-  return useFirebase().firestore;
+  const context = useFirebase();
+  if (!context) {
+    throw new Error('Firebase not initialized');
+  }
+  return context.firestore;
 }
